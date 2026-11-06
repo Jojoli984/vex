@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://b1lacdju4du58"]
+
+[ext_resource type="Script" uid="uid://qjrr1wpk4kuj" path="res://victoria.gd" id="1_l06h1"]
+[ext_resource type="Texture2D" uid="uid://cjagopaytvmvp" path="res://assets/botones/fondo.png" id="1_okh8r"]
+[ext_resource type="Texture2D" uid="uid://c5mdgtl2src5d" path="res://assets/botones/menupr.png" id="2_fty84"]
+[ext_resource type="Texture2D" uid="uid://lgjgn3rtngx7" path="res://assets/botones/rei.png" id="3_l06h1"]
+[ext_resource type="AudioStream" uid="uid://b2vnmehepibbr" path="res://assets/audio/audio/menu_music.mp3" id="5_eudnl"]
+
+[node name="Victoria" type="Control" unique_id=9831846]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_l06h1")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1207064314]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_okh8r")
+expand_mode = 1
+
+[node name="volver" type="TextureButton" parent="." unique_id=1778860602]
+layout_mode = 0
+offset_left = 605.0
+offset_top = 550.0
+offset_right = 985.0
+offset_bottom = 633.0
+texture_normal = ExtResource("2_fty84")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="reiniciar" type="TextureButton" parent="." unique_id=1241318389]
+layout_mode = 0
+offset_left = 271.0
+offset_top = 546.0
+offset_right = 576.0
+offset_bottom = 634.0
+texture_normal = ExtResource("3_l06h1")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1453355904]
+stream = ExtResource("5_eudnl")
+autoplay = true
+bus = &"Musica"

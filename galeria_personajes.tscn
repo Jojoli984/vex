@@ -1,0 +1,159 @@
+[gd_scene format=3 uid="uid://s0m4rwrq4717"]
+
+[ext_resource type="Texture2D" uid="uid://buo7a5x6ph5bb" path="res://assets/images/tercerf.png" id="1_4qcc0"]
+[ext_resource type="Script" uid="uid://dssyo33cey54v" path="res://galeria_personajes.gd" id="1_lq1p8"]
+[ext_resource type="Texture2D" uid="uid://0o0lvk0hrlgn" path="res://assets/images/3bbtn.png" id="2_u2jg8"]
+[ext_resource type="Texture2D" uid="uid://d26an2to4fgyn" path="res://assets/images/btnaranja.png" id="3_kihyc"]
+[ext_resource type="Texture2D" uid="uid://ca585s1wq47ha" path="res://assets/images/fbtn_gp.png" id="4_ovnyd"]
+[ext_resource type="Texture2D" uid="uid://dgv24scm3gska" path="res://assets/images/vbtn_gp.png" id="5_lq1p8"]
+[ext_resource type="SpriteFrames" uid="uid://x0ilc7yax08o" path="res://vex.tres" id="7_lq1p8"]
+[ext_resource type="SpriteFrames" uid="uid://csp146al2l5yu" path="res://angle.tres" id="8_c03om"]
+[ext_resource type="Script" uid="uid://cni3smuqmgn45" path="res://char_preview.gd" id="8_k5cg7"]
+[ext_resource type="Script" uid="uid://bstjoox32h2es" path="res://char_preview2.gd" id="10_74vek"]
+[ext_resource type="AudioStream" uid="uid://b2vnmehepibbr" path="res://assets/audio/audio/menu_music.mp3" id="11_74vek"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oa4e6"]
+bg_color = Color(0.8983938, 0.46683037, 0.09821064, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_74vek"]
+bg_color = Color(0.03469409, 0.35977915, 0.5062285, 1)
+
+[node name="galeria_personajes" type="Control" unique_id=243204505]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lq1p8")
+
+[node name="Fondo" type="TextureRect" parent="." unique_id=714896822]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_4qcc0")
+expand_mode = 1
+
+[node name="RecuadroVex" type="TextureRect" parent="." unique_id=1916499908]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -1022.0
+offset_top = -153.5
+offset_right = -587.0
+offset_bottom = 99.0
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("2_u2jg8")
+expand_mode = 1
+
+[node name="RecuadroAngle" type="TextureRect" parent="." unique_id=1683199452]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 570.0
+offset_top = 172.0
+offset_right = 1085.0
+offset_bottom = 424.0
+texture = ExtResource("3_kihyc")
+expand_mode = 1
+
+[node name="BotonFlecha" type="TextureButton" parent="." unique_id=594044199]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 810.0
+offset_top = 560.0
+offset_right = 965.0
+offset_bottom = 648.0
+texture_normal = ExtResource("4_ovnyd")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="volver" type="TextureButton" parent="." unique_id=852864587]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 455.0
+offset_top = 578.0
+offset_right = 721.0
+offset_bottom = 650.0
+texture_normal = ExtResource("5_lq1p8")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Vex" type="AnimatedSprite2D" parent="." unique_id=1501970901]
+position = Vector2(212.99998, 301.99997)
+scale = Vector2(2.5, 2.5)
+sprite_frames = ExtResource("7_lq1p8")
+animation = &"hurt"
+script = ExtResource("8_k5cg7")
+
+[node name="Angle" type="AnimatedSprite2D" parent="." unique_id=107077360]
+position = Vector2(682.99994, 304.99997)
+scale = Vector2(2.5, 2.5)
+sprite_frames = ExtResource("8_c03om")
+animation = &"hurt"
+script = ExtResource("10_74vek")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1160862707]
+layout_mode = 0
+offset_left = 739.0
+offset_top = 232.0
+offset_right = 992.0
+offset_bottom = 271.0
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=67421892]
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxFlat_oa4e6")
+text = "ANGLE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="VBoxContainer" unique_id=439508957]
+layout_mode = 2
+text = "Ex-Mecanico de talleres 
+clandestinos"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="VBoxContainer" unique_id=2039893997]
+layout_mode = 2
+text = "HP 140 - VELOCIDAD 240"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MusicaFondo" type="AudioStreamPlayer" parent="." unique_id=994912322]
+stream = ExtResource("11_74vek")
+autoplay = true
+bus = &"Musica"
+
+[node name="VBoxContainer4" type="VBoxContainer" parent="MusicaFondo" unique_id=743281191]
+offset_left = 265.0
+offset_top = 229.0
+offset_right = 518.0
+offset_bottom = 378.0
+
+[node name="Label" type="Label" parent="MusicaFondo/VBoxContainer4" unique_id=437811166]
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxFlat_74vek")
+text = "VEX"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="MusicaFondo/VBoxContainer4" unique_id=929177602]
+layout_mode = 2
+text = "Antigua mensajera 
+de la ciudad zero"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="MusicaFondo/VBoxContainer4" unique_id=2047738347]
+layout_mode = 2
+text = "HP 80 - VELOCIDAD 350"
+horizontal_alignment = 1
+vertical_alignment = 1

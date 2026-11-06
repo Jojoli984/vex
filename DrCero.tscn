@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://c1t8ikoel8k5v"]
+
+[ext_resource type="Script" uid="uid://c7io2bban5ddu" path="res://dr_cero.gd" id="1_xjbd5"]
+[ext_resource type="SpriteFrames" uid="uid://c3dj2yyfbss7e" path="res://drcero.tres" id="2_4uwmw"]
+[ext_resource type="AudioStream" uid="uid://cm7vgfftb2mnq" path="res://assets/audio/audio/weapon_vex.mp3" id="3_lwnp4"]
+[ext_resource type="AudioStream" uid="uid://dqdj5vikyik0s" path="res://assets/audio/audio/player_hurt.mp3" id="4_g7jbo"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_o6y64"]
+
+[node name="DrCero" type="CharacterBody2D" unique_id=1335418404]
+script = ExtResource("1_xjbd5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1876842534]
+sprite_frames = ExtResource("2_4uwmw")
+animation = &"hurt"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2051361963]
+shape = SubResource("CapsuleShape2D_o6y64")
+
+[node name="SonidoDisparo" type="AudioStreamPlayer2D" parent="." unique_id=868864801]
+stream = ExtResource("3_lwnp4")
+bus = &"Efectos"
+
+[node name="SonidoCaminar" type="AudioStreamPlayer2D" parent="." unique_id=1895921745]
+bus = &"Efectos"
+
+[node name="TimerPasos" type="Timer" parent="." unique_id=1569945444]
+wait_time = 0.6
+
+[node name="SonidoGolpe" type="AudioStreamPlayer2D" parent="." unique_id=1338409492]
+stream = ExtResource("4_g7jbo")
+bus = &"Efectos"

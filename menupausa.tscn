@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://cry0cnrkhvjee"]
+
+[ext_resource type="Script" uid="uid://bq22elsbypa4b" path="res://menupausa.gd" id="1_130pw"]
+[ext_resource type="Texture2D" uid="uid://c10sjbga5h8rh" path="res://assets/segundof (1).png" id="1_n5i1q"]
+[ext_resource type="Texture2D" uid="uid://dutrufmeqd604" path="res://assets/botones/pb.png" id="3_130pw"]
+[ext_resource type="Texture2D" uid="uid://lgjgn3rtngx7" path="res://assets/botones/rei.png" id="5_2vn0x"]
+[ext_resource type="Texture2D" uid="uid://dhqfjohlwevid" path="res://assets/botones/cboton.png" id="5_quwlq"]
+[ext_resource type="Texture2D" uid="uid://c5mdgtl2src5d" path="res://assets/botones/menupr.png" id="6_2vn0x"]
+[ext_resource type="AudioStream" uid="uid://b2vnmehepibbr" path="res://assets/audio/audio/menu_music.mp3" id="7_quwlq"]
+
+[node name="menupausa" type="CanvasLayer" unique_id=603989254]
+script = ExtResource("1_130pw")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=54138423]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_n5i1q")
+expand_mode = 1
+
+[node name="Continuar" type="TextureButton" parent="." unique_id=820663667]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -172.0
+offset_top = -160.5
+offset_right = 172.0
+offset_bottom = -57.5
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("3_130pw")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Reiniciar" type="TextureButton" parent="." unique_id=989682534]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -176.0
+offset_top = -51.5
+offset_right = 170.0
+offset_bottom = 51.5
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("5_2vn0x")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Opciones" type="TextureButton" parent="." unique_id=1293113005]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -172.0
+offset_top = 62.5
+offset_right = 172.0
+offset_bottom = 165.5
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("5_quwlq")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Volver" type="TextureButton" parent="." unique_id=505884918]
+offset_left = 357.0
+offset_top = 508.0
+offset_right = 797.0
+offset_bottom = 616.0
+texture_normal = ExtResource("6_2vn0x")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="MusicaFondo" type="AudioStreamPlayer" parent="." unique_id=883770941]
+stream = ExtResource("7_quwlq")
+autoplay = true
+bus = &"Musica"

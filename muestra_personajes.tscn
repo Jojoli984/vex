@@ -1,0 +1,199 @@
+[gd_scene format=3 uid="uid://dk1qvw0tcfdxg"]
+
+[ext_resource type="Texture2D" uid="uid://c10sjbga5h8rh" path="res://assets/segundof (1).png" id="1_d8j71"]
+[ext_resource type="Script" uid="uid://c81o80m2sertk" path="res://muestra_personajes.gd" id="1_jlv2o"]
+[ext_resource type="Texture2D" uid="uid://bkby6bqi835xf" path="res://assets/personajes_vex.png" id="2_mushn"]
+[ext_resource type="Texture2D" uid="uid://cekimyv8dv8bo" path="res://assets/personajes_2.png" id="3_jlv2o"]
+[ext_resource type="Texture2D" uid="uid://de63t564bc42l" path="res://assets/personajes_dr.png" id="4_uixlu"]
+[ext_resource type="Texture2D" uid="uid://d4ehtuhjafhdt" path="res://assets/personajes_3.png" id="5_mh4j5"]
+[ext_resource type="SpriteFrames" uid="uid://x0ilc7yax08o" path="res://vex.tres" id="6_jfuo6"]
+[ext_resource type="Script" uid="uid://cni3smuqmgn45" path="res://char_preview.gd" id="7_qr22n"]
+[ext_resource type="SpriteFrames" uid="uid://csp146al2l5yu" path="res://angle.tres" id="9_qr22n"]
+[ext_resource type="Script" uid="uid://bstjoox32h2es" path="res://char_preview2.gd" id="10_lw3gx"]
+[ext_resource type="SpriteFrames" uid="uid://c3dj2yyfbss7e" path="res://drcero.tres" id="11_0flgn"]
+[ext_resource type="Script" uid="uid://dlb2jggr1i8vg" path="res://char_preview3.gd" id="12_dd4lh"]
+[ext_resource type="Texture2D" uid="uid://dgv24scm3gska" path="res://assets/images/vbtn_gp.png" id="13_lw3gx"]
+[ext_resource type="AudioStream" uid="uid://b2vnmehepibbr" path="res://assets/audio/audio/menu_music.mp3" id="14_0flgn"]
+
+[node name="Personajes" type="Control" unique_id=1291758262]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jlv2o")
+
+[node name="Fondo" type="TextureRect" parent="." unique_id=1966839494]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_d8j71")
+expand_mode = 1
+
+[node name="BtnVex" type="TextureButton" parent="." unique_id=1618355621]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -451.0
+offset_top = -181.0
+offset_right = -156.0
+offset_bottom = 110.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("2_mushn")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="BtnAngle" type="TextureButton" parent="." unique_id=507156896]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -161.0
+offset_top = -180.0
+offset_right = 145.0
+offset_bottom = 118.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("3_jlv2o")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="BtnDoctor" type="TextureButton" parent="." unique_id=1318799301]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 154.0
+offset_top = -162.0
+offset_right = 431.0
+offset_bottom = 109.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("4_uixlu")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="placa" type="TextureButton" parent="." unique_id=1422785911]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -205.0
+offset_top = -201.0
+offset_right = 208.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("5_mh4j5")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Vex" type="AnimatedSprite2D" parent="." unique_id=835111586]
+position = Vector2(283, 284)
+scale = Vector2(4, 4)
+sprite_frames = ExtResource("6_jfuo6")
+animation = &"hurt"
+script = ExtResource("7_qr22n")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=239476272]
+layout_mode = 0
+offset_left = 216.0
+offset_top = 358.0
+offset_right = 338.0
+offset_bottom = 486.0
+
+[node name="vex" type="Label" parent="VBoxContainer" unique_id=1071497314]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "vex"
+horizontal_alignment = 1
+
+[node name="angle" type="AnimatedSprite2D" parent="." unique_id=901340245]
+position = Vector2(560, 280)
+scale = Vector2(4, 4)
+sprite_frames = ExtResource("9_qr22n")
+animation = &"walk_up_right"
+script = ExtResource("10_lw3gx")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=1622560323]
+layout_mode = 0
+offset_left = 523.0
+offset_top = 361.0
+offset_right = 591.0
+offset_bottom = 434.0
+
+[node name="Label" type="Label" parent="VBoxContainer2" unique_id=1225938303]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Angle
+"
+
+[node name="drcero" type="AnimatedSprite2D" parent="." unique_id=1887377471]
+position = Vector2(864.99994, 278.99997)
+scale = Vector2(4, 4)
+sprite_frames = ExtResource("11_0flgn")
+animation = &"walk_up_right"
+script = ExtResource("12_dd4lh")
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="." unique_id=1468964793]
+layout_mode = 0
+offset_left = 816.0
+offset_top = 364.0
+offset_right = 908.0
+offset_bottom = 437.0
+
+[node name="Label" type="Label" parent="VBoxContainer3" unique_id=289074292]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Dr.Cero
+"
+
+[node name="VBoxContainer4" type="VBoxContainer" parent="." unique_id=2145485446]
+layout_mode = 0
+offset_left = 414.0
+offset_top = 463.0
+offset_right = 741.0
+offset_bottom = 617.0
+
+[node name="Label" type="Label" parent="VBoxContainer4" unique_id=1387942153]
+layout_mode = 2
+text = "Controles"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="VBoxContainer4" unique_id=367773835]
+layout_mode = 2
+text = "A: Izquierda 	 D: Derecha S: Abajo W: Arriba"
+
+[node name="Label3" type="Label" parent="VBoxContainer4" unique_id=2116720285]
+layout_mode = 2
+text = "Click Derecho: Disparar 					  E: Interactuar"
+
+[node name="volver" type="TextureButton" parent="." unique_id=1243728555]
+layout_mode = 0
+offset_left = 399.0
+offset_top = 562.0
+offset_right = 758.0
+offset_bottom = 648.0
+texture_normal = ExtResource("13_lw3gx")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="MusicaFondo" type="AudioStreamPlayer" parent="." unique_id=567813970]
+stream = ExtResource("14_0flgn")
+autoplay = true
+bus = &"Musica"

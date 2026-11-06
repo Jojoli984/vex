@@ -1,0 +1,152 @@
+[gd_scene format=4 uid="uid://dtq153ijtdfk7"]
+
+[ext_resource type="Texture2D" uid="uid://cbxwthq4uvkl5" path="res://assets/images/Pixel_16_interiors_v2_free/tiles and items.png" id="1_dibm6"]
+[ext_resource type="TileSet" uid="uid://cl15ndwis487b" path="res://new_tile_set.tres" id="1_yy704"]
+[ext_resource type="PackedScene" uid="uid://d2da6ba20p2op" path="res://Vex.tscn" id="3_4vms5"]
+[ext_resource type="Script" uid="uid://c4h08dkljubhp" path="res://salida.gd" id="4_tevsu"]
+[ext_resource type="Script" uid="uid://dn8d31owtkyve" path="res://canvas_layer.gd" id="5_3j17q"]
+[ext_resource type="PackedScene" uid="uid://16d1sjm8t727" path="res://car_part.tscn" id="6_kkmbx"]
+[ext_resource type="AudioStream" uid="uid://defwq4kllfi6t" path="res://assets/audio/audio/game_music.mp3" id="7_qpk10"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4vms5"]
+texture = ExtResource("1_dibm6")
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:1/0 = 0
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+11:1/0 = 0
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:2/0 = 0
+4:2/0 = 0
+4:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:2/0 = 0
+5:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+1:3/0 = 0
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:3/0 = 0
+5:3/0 = 0
+5:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+1:4/0 = 0
+1:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:4/0 = 0
+2:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:4/0 = 0
+4:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:4/0 = 0
+5:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+10:4/0 = 0
+11:4/0 = 0
+2:5/0 = 0
+2:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:5/0 = 0
+3:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:5/0 = 0
+4:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+11:5/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+10:7/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+5:8/0 = 0
+6:8/0 = 0
+7:8/0 = 0
+9:8/0 = 0
+10:8/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+5:9/0 = 0
+6:9/0 = 0
+7:9/0 = 0
+8:9/0 = 0
+9:9/0 = 0
+10:9/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_tevsu"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_4vms5")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3j17q"]
+size = Vector2(70, 30)
+
+[node name="Interior2" type="Node2D" unique_id=1935205026]
+
+[node name="suelo" type="TileMapLayer" parent="." unique_id=968869086]
+scale = Vector2(2, 2)
+tile_map_data = PackedByteArray("AAAKAAYAAAADAAIAAAAKAAcAAAADAAIAAAAKAAgAAAADAAIAAAAKAAkAAAADAAIAAAAKAAoAAAADAAIAAAAKAAsAAAADAAIAAAALAAsAAAADAAIAAAAMAAsAAAADAAIAAAALAAYAAAADAAIAAAALAAcAAAADAAIAAAALAAgAAAADAAIAAAALAAkAAAADAAIAAAALAAoAAAADAAIAAAAMAAYAAAADAAIAAAAMAAcAAAADAAIAAAAMAAgAAAADAAIAAAAMAAkAAAADAAIAAAAMAAoAAAADAAIAAAANAAYAAAADAAIAAAANAAcAAAADAAIAAAANAAgAAAADAAIAAAANAAkAAAADAAIAAAANAAoAAAADAAIAAAANAAsAAAADAAIAAAAOAAYAAAADAAIAAAAOAAcAAAADAAIAAAAOAAgAAAADAAIAAAAOAAkAAAADAAIAAAAOAAoAAAADAAIAAAAOAAsAAAADAAIAAAAPAAYAAAADAAIAAAAPAAcAAAADAAIAAAAPAAgAAAADAAIAAAAPAAkAAAADAAIAAAAPAAoAAAADAAIAAAAPAAsAAAADAAIAAAAPAAwAAAADAAIAAAAQAAYAAAADAAIAAAAQAAcAAAADAAIAAAAQAAgAAAADAAIAAAAQAAkAAAADAAIAAAAQAAoAAAADAAIAAAAQAAsAAAADAAIAAAAQAAwAAAADAAIAAAARAAYAAAADAAIAAAARAAcAAAADAAIAAAARAAgAAAADAAIAAAARAAkAAAADAAIAAAARAAoAAAADAAIAAAARAAsAAAADAAIAAAARAAwAAAADAAIAAAASAAYAAAADAAIAAAASAAcAAAADAAIAAAASAAgAAAADAAIAAAASAAkAAAADAAIAAAASAAoAAAADAAIAAAASAAsAAAADAAIAAAASAAwAAAADAAIAAAAJAAYAAAADAAIAAAAJAAcAAAADAAIAAAAJAAgAAAADAAIAAAAJAAkAAAADAAIAAAAJAAoAAAADAAIAAAAJAAsAAAADAAIAAAATAAYAAAADAAIAAAATAAcAAAADAAIAAAATAAgAAAADAAIAAAATAAkAAAADAAIAAAATAAoAAAADAAIAAAATAAsAAAADAAIAAAATAAwAAAADAAIAAAATAA0AAAADAAIAAAATAA4AAAADAAIAAAARAA0AAAADAAIAAAARAA4AAAADAAIAAAASAA0AAAADAAIAAAASAA4AAAADAAIAAAAUAA0AAAADAAIAAAAUAA4AAAADAAIAAAAVAA0AAAADAAIAAAAVAA4AAAADAAIAAAAUAAYAAAADAAIAAAAUAAcAAAADAAIAAAAUAAgAAAADAAIAAAAUAAkAAAADAAIAAAAUAAoAAAADAAIAAAAUAAsAAAADAAIAAAAUAAwAAAADAAIAAAAVAAYAAAADAAIAAAAVAAcAAAADAAIAAAAVAAgAAAADAAIAAAAVAAkAAAADAAIAAAAVAAoAAAADAAIAAAAVAAsAAAADAAIAAAAVAAwAAAADAAIAAAAPAA0AAAADAAIAAAAPAA4AAAADAAIAAAAPAA8AAAADAAIAAAAQAA0AAAADAAIAAAAQAA4AAAADAAIAAAAQAA8AAAADAAIAAAARAA8AAAADAAIAAAASAA8AAAADAAIAAAATAA8AAAADAAIAAAAUAA8AAAADAAIAAAAVAA8AAAADAAIAAAANAAwAAAADAAIAAAANAA0AAAADAAIAAAANAA4AAAADAAIAAAANAA8AAAADAAIAAAAOAAwAAAADAAIAAAAOAA0AAAADAAIAAAAOAA4AAAADAAIAAAAOAA8AAAADAAIAAAAQABAAAAADAAIAAAARABAAAAADAAIAAAA=")
+tile_set = ExtResource("1_yy704")
+
+[node name="pared" type="TileMapLayer" parent="." unique_id=230500096]
+scale = Vector2(2, 2)
+tile_map_data = PackedByteArray("AAAIAAYAAAABAAMAAAAIAAcAAAABAAMAAAAIAAgAAAABAAMAAAAIAAkAAAABAAMAAAAIAAoAAAABAAMAAAAIAAsAAAABAAMAAAAIAAwAAAABAAQAAAAJAAwAAAADAAUAAAAKAAwAAAADAAUAAAALAAwAAAADAAUAAAAMAAwAAAACAAQAAAAMAA0AAAABAAMAAAAMAA4AAAABAAMAAAAMAA8AAAABAAMAAAAMABAAAAABAAQAAAANABAAAAADAAUAAAAOABAAAAADAAUAAAAPABAAAAADAAUAAAASABAAAAADAAUAAAATABAAAAADAAUAAAAUABAAAAADAAUAAAAVABAAAAADAAUAAAAWABAAAAAEAAUAAAAWAAYAAAAFAAMAAAAWAAcAAAAFAAMAAAAWAAgAAAAFAAMAAAAWAAkAAAAFAAMAAAAWAAoAAAAFAAMAAAAWAAsAAAAFAAMAAAAWAAwAAAAFAAMAAAAWAA0AAAAFAAMAAAAWAA4AAAAFAAMAAAAWAA8AAAAFAAMAAAAWAAUAAAAFAAIAAAAVAAUAAAADAAEAAAAJAAUAAAADAAEAAAAKAAUAAAADAAEAAAALAAUAAAADAAEAAAAMAAUAAAADAAEAAAANAAUAAAADAAEAAAAOAAUAAAADAAEAAAAPAAUAAAADAAEAAAAQAAUAAAADAAEAAAARAAUAAAADAAEAAAASAAUAAAADAAEAAAATAAUAAAADAAEAAAAUAAUAAAADAAEAAAAIAAUAAAACAAEAAAA=")
+tile_set = SubResource("TileSet_tevsu")
+
+[node name="player" parent="." unique_id=1825677908 instance=ExtResource("3_4vms5")]
+position = Vector2(556, 471)
+scale = Vector2(1.25, 1.25)
+
+[node name="Salida" type="Area2D" parent="." unique_id=1621077780]
+position = Vector2(542, 531)
+scale = Vector2(2, 2)
+script = ExtResource("4_tevsu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Salida" unique_id=2003016723]
+shape = SubResource("RectangleShape2D_3j17q")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1489825083]
+script = ExtResource("5_3j17q")
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer" unique_id=1141501741]
+offset_left = 112.0
+offset_top = 106.0
+offset_right = 312.0
+offset_bottom = 133.0
+value = 100.0
+
+[node name="CarPart" parent="." unique_id=1951561951 instance=ExtResource("6_kkmbx")]
+position = Vector2(610, 367)
+scale = Vector2(10, 10)
+
+[node name="MusicaFondo" type="AudioStreamPlayer" parent="." unique_id=2043805129]
+stream = ExtResource("7_qpk10")
+autoplay = true
+bus = &"Musica"

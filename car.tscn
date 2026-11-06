@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://uvboggd083ld"]
+
+[ext_resource type="Script" uid="uid://dw11o7eniw4ga" path="res://car.gd" id="1_7822p"]
+[ext_resource type="Texture2D" uid="uid://b4r8pwhqvt50r" path="res://assets/tilemap_packed.png" id="2_uoj53"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_24jkt"]
+size = Vector2(100, 60)
+
+[node name="Car" type="Area2D" unique_id=39469373]
+script = ExtResource("1_7822p")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1402261903]
+scale = Vector2(2, 2)
+texture = ExtResource("2_uoj53")
+region_enabled = true
+region_rect = Rect2(547.67053, 326.50806, 39.23346, 25.331818)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1281065366]
+shape = SubResource("RectangleShape2D_24jkt")

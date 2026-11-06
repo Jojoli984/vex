@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://16d1sjm8t727"]
+
+[ext_resource type="Script" uid="uid://d36xhrf2pobmw" path="res://car_part.gd" id="1_smpcj"]
+[ext_resource type="Texture2D" uid="uid://bqt0ymgw1kqed" path="res://assets/images/part_battery.png" id="2_ua137"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ju34s"]
+size = Vector2(4, 3)
+
+[node name="CarPart" type="Area2D" unique_id=1951561951]
+script = ExtResource("1_smpcj")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=845553710]
+scale = Vector2(0.015625, 0.015625)
+texture = ExtResource("2_ua137")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1673795693]
+shape = SubResource("RectangleShape2D_ju34s")
